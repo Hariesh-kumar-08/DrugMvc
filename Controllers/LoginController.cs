@@ -19,7 +19,7 @@ namespace DrugMvc.Controllers
             {
                 client.BaseAddress = new Uri(baseURL);
                 StringContent content = new StringContent(JsonConvert.SerializeObject(u), Encoding.UTF8, "application/json");
-                await client.PostAsync("https://localhost:7195/api/Methods/", content);
+                await client.PostAsync("https://localhost:7195/api/Login/", content);
                
             }
            return RedirectToAction("Index","Calling");
@@ -37,7 +37,7 @@ namespace DrugMvc.Controllers
             {
                 client.BaseAddress = new Uri(baseURL);
                 StringContent content = new StringContent(JsonConvert.SerializeObject(u), Encoding.UTF8, "application/json");
-                await client.PostAsync("https://localhost:7195/api/Methods/", content);
+                await client.PostAsync("https://localhost:7195/api/Login/", content);
             }
             return RedirectToAction("UserLogin", "Login");
         }
